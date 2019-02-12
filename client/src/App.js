@@ -23,7 +23,7 @@ import AddEducation from './components/add-credentials/AddEducation';
 import Profiles from './components/profiles/Profiles';
 import Profile from './components/profile/Profile';
 import CreateContract from './components/create-contract/CreateContract';
-// import MyContracts from './components/my-contracts/MyContracts';
+import Contracts from './components/contracts/Contracts';
 import Posts from './components/posts/Posts';
 import Post from './components/post/Post';
 import NotFound from './components/not-found/NotFound';
@@ -65,7 +65,7 @@ class App extends Component {
               <Route exact path="/profiles" component={Profiles} />
               <Route exact path="/profile/:handle" component={Profile} />
               <Route exact path="/contGen" component={CreateContract} />
-              {/* <Route exact path="/myContracts" component={MyContracts} /> */}
+              <Route exact path="/Contracts" component={Contracts} />
               <Switch>
                 <PrivateRoute exact path="/dashboard" component={Dashboard} />
               </Switch>

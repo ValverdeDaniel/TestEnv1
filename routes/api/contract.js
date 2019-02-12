@@ -38,8 +38,8 @@ router.get(
   }
 );
 
-// @route   GET api/profile/all
-// @desc    Get all profiles
+// @route   GET api/contracts/all
+// @desc    Get all contracts
 // @access  Public
 router.get('/all', (req, res) => {
   const errors = {};
@@ -132,7 +132,7 @@ router.post(
 router.get('/:id', passport.authenticate('jwt', {session: false}), (req, res) => {
   const errors = {};
 
-  Contract.findOne({ contract: req.contract.id })
+  Contract.findOne({ _id: req.params.id })
   .then(contract => {
     if(!contract) {
       errors.nocontract = 'there is no contract for this user';
