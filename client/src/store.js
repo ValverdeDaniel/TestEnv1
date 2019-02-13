@@ -10,8 +10,8 @@ const store = createStore(
   rootReducer,
   initialState,
   compose(
-    applyMiddleware(...middleware)
-  )
+    applyMiddleware(...middleware),
+  ),
 );
 
 export default store;

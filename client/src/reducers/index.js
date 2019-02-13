@@ -10,5 +10,5 @@ export default combineReducers({
   errors: errorReducer,
   profile: profileReducer,
   post: postReducer,
-  contract: contractReducer
+  contract: contractReducer,
 });

@@ -26,7 +26,15 @@ class Contracts extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-12">
-              {contractContent}
+              <h1 className="display-4 text-left">Contracts</h1>
+              <p className="lead text-left">
+                Below you can view your prior contracts
+              </p>
+              <div className="row">
+                <div className="col-md-12">
+                  {contractContent}
+                </div>
+              </div>
             </div>
           </div>
         </div>
