@@ -13,4 +13,6 @@ export const ADD_POST = 'ADD_POST';
 export const DELETE_POST = 'DELETE_POST';
 export const GET_CONTRACTS = 'GET_CONTRACTS';
 export const CONTRACT_LOADING = 'CONTRACT_LOADING';
+export const CONTRACT_SAVING = 'CONTRACT_SAVING';
 export const GET_CONTRACT = 'GET_CONTRACT';
+export const VOTE_CONTRACT = 'VOTE_CONTRACT';

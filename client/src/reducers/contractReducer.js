@@ -3,12 +3,15 @@ import {
   GET_CONTRACTS,
   GET_CONTRACT,
   CONTRACT_LOADING,
+  CONTRACT_SAVING,
+  VOTE_CONTRACT
 } from '../actions/types';
 
 const initialState = {
   contracts: [],
   contract: {},
   loading: false,
+  saving: false
 };
 
 export default function (state = initialState, action) {
@@ -18,11 +21,22 @@ export default function (state = initialState, action) {
         ...state,
         loading: true,
       };
+    case CONTRACT_SAVING:
+      return {
+        ...state,
+        saving: true,
+      };
     case GET_CONTRACT:
       return {
         ...state,
         contract: action.payload,
         loading: false
+      };
+    case VOTE_CONTRACT:
+      return {
+        ...state,
+        contract: action.payload ? action.payload : state.contract,
+        saving: false
       };
     case GET_CONTRACTS:
       return {

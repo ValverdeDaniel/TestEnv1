@@ -81,9 +81,6 @@ class ContractItem extends Component {
           Current User Votes:
             {votes.map(vote => (<div>{vote.user.name} - {vote.userSay}</div>))}
           </div>
-          <div>
-          <Link to={`/Contract/${contract._id}/view`}>Go to Detail</Link>
-          </div>
         </div>
       </div>
     );

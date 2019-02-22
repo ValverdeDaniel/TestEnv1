@@ -31,6 +31,7 @@ router.get(
     try {
       let contracts = await Contract.find({ user: req.user.id })
       .populate('user', ['name', 'avatar'])
+      .populate('votes.user')
       res.send(contracts)
     } catch (error) {
       res.status(500).send(error)
@@ -132,7 +133,7 @@ router.post(
 router.get('/:id', passport.authenticate('jwt', {session: false}), (req, res) => {
   const errors = {};
 
-  Contract.findOne({ _id: req.params.id })
+  Contract.findOne({ _id: req.params.id }).populate('votes.user')
   .then(contract => {
     if(!contract) {
       errors.nocontract = 'there is no contract for this user';
@@ -141,6 +142,29 @@ router.get('/:id', passport.authenticate('jwt', {session: false}), (req, res) =>
     res.json(contract);
   })
   .catch(err => res.status(404).json(err))
+});
+
+
+router.put('/:id/vote', passport.authenticate('jwt', {session: false}), async (req, res) => {
+  try {
+    const errors = {};
+    let contract = await Contract.findOne({ _id: req.params.id })
+    if (!contract) {
+      throw new Error('Contract not found');
+    }
+    let votes = contract.votes || [];
+    let existingVote = votes.find(vote => vote.user.toString() === req.user._id.toString())
+    if (existingVote) {
+      existingVote.userSay = req.body.userSay;
+    } else {
+      votes.push({user: req.user._id, userSay: req.body.userSay});
+    }
+    contract.votes = votes;
+    await contract.save();
+    res.json(contract)
+  } catch (error) {
+    res.status(404).json(error)
+  }
 });
 
 //attempt2 of getting contract info
