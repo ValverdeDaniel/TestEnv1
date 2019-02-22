@@ -24,6 +24,7 @@ import Profiles from './components/profiles/Profiles';
 import Profile from './components/profile/Profile';
 import CreateContract from './components/create-contract/CreateContract';
 import Contracts from './components/contracts/Contracts';
+import Contract from './components/contract/contract';
 import Posts from './components/posts/Posts';
 import Post from './components/post/Post';
 import NotFound from './components/not-found/NotFound';
@@ -66,6 +67,7 @@ class App extends Component {
               <Route exact path="/profile/:handle" component={Profile} />
               <Route exact path="/contGen" component={CreateContract} />
               <Route exact path="/Contracts" component={Contracts} />
+              <Route exact path="/Contract/:id/view" component={Contract} />
               <Switch>
                 <PrivateRoute exact path="/dashboard" component={Dashboard} />
               </Switch>

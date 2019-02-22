@@ -1,6 +1,7 @@
 import {
   GET_ERRORS,
   GET_CONTRACTS,
+  GET_CONTRACT,
   CONTRACT_LOADING,
 } from '../actions/types';
 
@@ -17,12 +18,12 @@ export default function (state = initialState, action) {
         ...state,
         loading: true,
       };
-    //   case GET_CONTRACT:
-    //     return {
-    //       ...state,
-    //       contracts: action.payload,
-    //       loading: false
-    //     };
+    case GET_CONTRACT:
+      return {
+        ...state,
+        contract: action.payload,
+        loading: false
+      };
     case GET_CONTRACTS:
       return {
         ...state,

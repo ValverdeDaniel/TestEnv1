@@ -3,6 +3,7 @@ import {
   GET_ERRORS,
   GET_CONTRACTS,
   CONTRACT_LOADING,
+  GET_CONTRACT,
 } from './types';
 
 // Create Contract
@@ -32,6 +33,21 @@ export const getContracts = () => (dispatch) => {
     }))
     .catch(err => dispatch({
       type: GET_CONTRACTS,
+      payload: null,
+    }));
+};
+
+// Get Contract
+export const getContract = id => (dispatch) => {
+  dispatch(setContractLoading());
+  axios
+    .get(`/api/contracts/${id}`)
+    .then(res => dispatch({
+      type: GET_CONTRACT,
+      payload: res.data,
+    }))
+    .catch(err => dispatch({
+      type: GET_CONTRACT,
       payload: null,
     }));
 };

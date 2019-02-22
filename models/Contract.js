@@ -55,6 +55,17 @@ const ContractSchema = new Schema({
         default: Date.now
       }
     }
+  ],
+  votes: [
+    {
+      user: {
+        type: Schema.Types.ObjectId,
+        ref: 'users'
+      },
+      userSay: {
+        type: String
+      }
+    }
   ]
 });
 
