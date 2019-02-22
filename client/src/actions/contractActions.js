@@ -3,7 +3,9 @@ import {
   GET_ERRORS,
   GET_CONTRACTS,
   CONTRACT_LOADING,
+  CONTRACT_SAVING,
   GET_CONTRACT,
+  VOTE_CONTRACT
 } from './types';
 
 // Create Contract
@@ -20,6 +22,10 @@ export const createContract = (contractData, history) => (dispatch) => {
 // Set loading state
 export const setContractLoading = () => ({
   type: CONTRACT_LOADING,
+});
+// Set saving state
+export const setContractSaving = () => ({
+  type: CONTRACT_SAVING,
 });
 
 // Get Contracts
@@ -48,6 +54,22 @@ export const getContract = id => (dispatch) => {
     }))
     .catch(err => dispatch({
       type: GET_CONTRACT,
+      payload: null,
+    }));
+};
+
+// Get Contract
+export const voteContract = (id, data) => (dispatch) => {
+  dispatch(setContractSaving());
+  console.log('voteContract ', id, data)
+  axios
+    .put(`/api/contracts/${id}/vote`, data)
+    .then(res => dispatch({
+      type: VOTE_CONTRACT,
+      payload: res.data,
+    }))
+    .catch(err => dispatch({
+      type: VOTE_CONTRACT,
       payload: null,
     }));
 };
