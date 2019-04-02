@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Spinner from '../common/Spinner';
 import { getContract, voteContract } from '../../actions/contractActions';
-import ContractDetail from './ContractDetail'
+import ContractDetail from './ContractDetail';
+import './contract.css';
 
 class Contract extends Component {
   componentDidMount() {
@@ -35,18 +36,18 @@ class Contract extends Component {
                     <button onClick={this.onClickDecline}>Decline</button>
                     </div>
                 </div>
-                );
+            );
         }
 
         return (
             <div className="contract">
-            <div className="container">
-                <div className="row">
-                <div className="col-md-12">
-                    {contractContent}
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-12">
+                            {contractContent}
+                        </div>
+                    </div>
                 </div>
-                </div>
-            </div>
             </div>
         );
     }

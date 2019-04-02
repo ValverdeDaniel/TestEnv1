@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import classnames from 'classnames';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'; 
 
 //importing form components
 import TextFieldGroup from '../common/TextFieldGroup';
 import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
 import InputGroup from '../common/InputGroup';
 import SelectListGroup from '../common/SelectListGroup';
-import InputCheckboxGroup from '../common/InputCheckboxGroup';
+import InputCheckboxGroup from '../common/InputCheckboxGroup'; 
 
 // import { deletePost, addLike, removeLike } from '../../actions/postActions';
 
@@ -39,53 +39,41 @@ class ContractItem extends Component {
     const { contract, auth, showActions } = this.props;
     const { votes = [] } = contract;
     return (
-      <div className="card card-body mb-6">
+      <div className="table-row">
         <div className="row">
-        {/* <p className="lead">{contract.url}</p>
-        <p className="lead">{contract._id}</p> */}
-          <form>
-            <TextFieldGroup
-              // placeholder={contract.url}
-              // name="url"
-              value={contract.url}
-              // onChange={this.onChange}
-              // error={errors.url}
-              info="URL containing image for licensing"
-            />
-            <TextFieldGroup
-              value={contract.platform}
-              info="Platform you will use this content on"
-            />
-            <TextFieldGroup
-              value={contract.exclusive}
-              info="Will the Buyer have Exclusive rights to this content?"
-            />
-            <TextFieldGroup
-              value={contract.credit}
-              info="Will the Creator receive credit in your posts? ('yes' or 'no')"
-            />
-            <TextFieldGroup
-              value={contract.length_usage}
-              info="How long does the Buyer have the rights to this content?"
-            />
-            <TextFieldGroup
-              value={contract.price}
-              info="Set Price"
-            />
-            {/* <TextFieldGroup
-              value={contract.comments}
-              info="Comments"
-            /> */}
-          </form>
-          <div>
-          Current User Votes:
-            {votes.map(vote => (<div>{vote.user.name} - {vote.userSay}</div>))}
+          <div className="col-md-1">
+            <img src="{placeholder}" />
           </div>
-          <div>
-          <Link to={`/Contract/${contract._id}/view`}>Go to Detail</Link>
+          <div className="col-md-2">
+            <p>{contract._id}</p>
+          </div>
+          <div className="col-md-1">
+            <p>{contract.platform}</p>
+          </div>
+          <div className="col-md-1">
+            <p>{contract.exclusive}</p>
+          </div>
+          <div className="col-md-2">
+            <p>{contract.credit}</p>
+          </div>
+          <div className="col-md-1">
+            <p>{contract.length_usage}</p>
+          </div>
+          <div className="col-md-1">
+            <p>{contract.price}</p>
+          </div>
+          <div className="col-md-2">
+            <p>{votes.map(vote => (<div>{vote.user.name} - {vote.userSay}</div>))}</p>
+          </div>
+          <div className="col-md-1">
+            <Link to={`/Contract/${contract._id}/view`}>Go</Link>
           </div>
         </div>
+        {/* <p className="lead">{contract.url}</p>
+        <p className="lead">{contract._id}</p> */}
       </div>
+
+      
     );
   }
 }
