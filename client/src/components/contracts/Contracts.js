@@ -23,20 +23,82 @@ class Contracts extends Component {
 
     return (
       <div className="feed">
-        <div className="container">
+        <div className="table-title">
           <div className="row">
-            <div className="col-md-12">
-              <h1 className="display-4 text-left">Contracts</h1>
-              <p className="lead text-left">
-                Below you can view your prior contracts
-              </p>
+            <div className="col-md-9">
               <div className="row">
-                <div className="col-md-12">
-                  {contractContent}
+                <div className="col-md-auto">
+                  <h1 className="display-4">Proposals</h1>
+                </div>
+                <div className="col-md-auto align-self-end">
+                  <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#">All</a>
+                    </li> 
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Sent</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Countered</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Accepted</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Declined</a>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
+            <div className="col-md-3">
+              <div className="row">  
+                <div className="col-md-auto align-self-center">
+                  <button type="button" class="btn btn-primary">+ New Proposal</button>
+                </div>
+                <div className="col-md-auto align-self-center">
+                  <a href="#" className="user-help"><span>?</span></a>
+                </div> 
+                <div className="col-md-auto align-self-center">
+                  <a href="#" className="user-profile"><span>EK</span></a>
+                </div> 
+              </div>
+            </div>
           </div>
+        </div>
+        <div className="table-view">
+          <div className="table-header">
+            <div className="row">
+              <div className="col-md-1">
+                <p>Image</p>
+              </div>
+              <div className="col-md-2">
+                <p>ID</p>
+              </div>
+              <div className="col-md-1">
+                <p>Platform</p>
+              </div>
+              <div className="col-md-1">
+                <p>Exclusive?</p>
+              </div>
+              <div className="col-md-2">
+                <p>Credit Used</p>
+              </div>
+              <div className="col-md-1">
+                <p>Length</p>
+              </div>
+              <div className="col-md-1">
+                <p>Price</p>
+              </div>
+              <div className="col-md-2">
+                <p>Current User Votes</p>
+              </div>
+              <div className="col-md-1">
+                <p>URL</p>
+              </div>
+            </div>
+          </div>
+          {contractContent}
         </div>
       </div>
     );
