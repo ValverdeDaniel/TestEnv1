@@ -9,7 +9,8 @@ import TextFieldGroup from '../common/TextFieldGroup';
 import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
 import InputGroup from '../common/InputGroup';
 import SelectListGroup from '../common/SelectListGroup';
-import InputCheckboxGroup from '../common/InputCheckboxGroup'; 
+import InputCheckboxGroup from '../common/InputCheckboxGroup';
+import placeholder from '../common/spinner.gif';
 
 // import { deletePost, addLike, removeLike } from '../../actions/postActions';
 
