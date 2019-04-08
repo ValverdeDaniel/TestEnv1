@@ -47,7 +47,10 @@ class PostForm extends Component {
     return (
       <div className="post-form mb-3">
         <div className="card card-info">
-          <div className="card-header bg-info text-white">Say Somthing...</div>
+          <div className="card-header bg-info text-white">
+            We want to build this platform with our customers in mind. 
+            If there is anything that you wish this platform could do let us hear about it below.
+          </div>
           <div className="card-body">
             <form onSubmit={this.onSubmit}>
               <div className="form-group">

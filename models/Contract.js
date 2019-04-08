@@ -11,51 +11,51 @@ const ContractSchema = new Schema({
     type: String,
     required: true
   },
-  platform: {
-    type: String,
-    required: true
-  },
-  exclusive: {
-    type: Boolean,
-    required: true
-  },
-  credit: {
-    type: Boolean,
-    required: true
-  },
-  length_usage: {
-    type: Number,
-    required: true
-  },
+  // platform: {
+  //   type: String,
+  //   required: true
+  // },
+  // exclusive: {
+  //   type: Boolean,
+  //   required: true
+  // },
+  // credit: {
+  //   type: Boolean,
+  //   required: true
+  // },
+  // length_usage: {
+  //   type: Number,
+  //   required: true
+  // },
   price: {
-    type: Number,
+    type: String,
     required: true
   },
   date: {
     type: Date,
     default: Date.now
   },
-  comment: [
-    {
-      user: {
-        type: Schema.Types.ObjectId,
-        ref: 'users'
-      },
-      text: {
-        type: String
-      },
-      name: {
-        type: String
-      },
-      avatar: {
-        type: String
-      },
-      date: {
-        type: Date,
-        default: Date.now
-      }
-    }
-  ],
+  // comment: [
+  //   {
+  //     user: {
+  //       type: Schema.Types.ObjectId,
+  //       ref: 'users'
+  //     },
+  //     text: {
+  //       type: String
+  //     },
+  //     name: {
+  //       type: String
+  //     },
+  //     avatar: {
+  //       type: String
+  //     },
+  //     date: {
+  //       type: Date,
+  //       default: Date.now
+  //     }
+  //   }
+  // ],
   votes: [
     {
       user: {

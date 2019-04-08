@@ -14,12 +14,12 @@ class CreateProfile extends Component {
     super(props);
     this.state = {
       url: '',
-      platform: '',
-      exclusive: false,
-      credit: true,
-      length_usage: '',
+      // platform: '',
+      // exclusive: false,
+      // credit: true,
+      // length_usage: '',
       price: '',
-      comments: '',
+      // comments: '',
       errors: {}
     };
 
@@ -38,12 +38,12 @@ class CreateProfile extends Component {
 
     const contractData = {
       url: this.state.url,
-      platform: this.state.platform,
-      exclusive: this.state.exclusive,
-      credit: this.state.credit,
-      length_usage: this.state.length_usage,
+      // platform: this.state.platform,
+      // exclusive: this.state.exclusive,
+      // credit: this.state.credit,
+      // length_usage: this.state.length_usage,
       price: this.state.price,
-      comments: this.state.comments,
+      // comments: this.state.comments,
 
     };
 
@@ -90,7 +90,7 @@ class CreateProfile extends Component {
                   error={errors.url}
                   info="URL containing image for licensing"
                 />
-                <SelectListGroup
+                {/* <SelectListGroup
                   placeholder="Platform"
                   name="platform"
                   value={this.state.platform}
@@ -122,14 +122,14 @@ class CreateProfile extends Component {
                   onChange={this.onChange}
                   error={errors.length_usage}
                   info="How long does the Buyer have the rights to this content?"
-                />
+                /> */}
                 <TextFieldGroup
-                  placeholder="Price"
+                  placeholder="i.e. (giftcard, $10, credit on post)"
                   name="price"
                   value={this.state.price}
                   onChange={this.onChange}
                   error={errors.price}
-                  info="Set Price"
+                  info="Compensation"
                 />
                 {/* <TextFieldGroup
                   placeholder="Date"
@@ -139,14 +139,14 @@ class CreateProfile extends Component {
                   error={errors.date}
                   info="Today's Date (This will automatically be populated in the DB and not be shown in the near future"
                 /> */}
-                <TextAreaFieldGroup
+                {/* <TextAreaFieldGroup
                   placeholder="Comments"
                   name="comments"
                   value={this.state.comments}
                   onChange={this.onChange}
                   error={errors.comments}
                   info="Any comments can be added here, this is where you can add non-monetary compensation as well."
-                />
+                /> */}
                 <input
                   type="submit"
                   value="Submit"

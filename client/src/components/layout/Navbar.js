@@ -21,7 +21,7 @@ class Navbar extends Component {
       <ul className="navigation-bar navigation-bottom">
         <li className="navigation-item">
           <Link className="navigation-link" to="/feed">
-            Post Feed
+            Feedback Forum
           </Link>
         </li>
         <li className="navigation-item">
@@ -58,12 +58,13 @@ class Navbar extends Component {
           <div className="navigation-logo"></div>
         </Link>  
         <ul className="navigation-bar">
-          <li className="navigation-item">
+          {/* i would like to add this creators page back but we need to make enhancements, i think it would be nice so users can find eachother, and businesses can see which users are already willing to make a deal. */}
+          {/* <li className="navigation-item">
             <Link className="navigation-link" to="/profiles">
               {' '}
               Creators
             </Link>
-          </li>
+          </li> */}
           <li className="navigation-item">
             <Link className="navigation-link" to="/contGen">
               {' '}

@@ -38,9 +38,9 @@ class Contracts extends Component {
                     <li class="nav-item">
                       <a class="nav-link" href="#">Sent</a>
                     </li>
-                    <li class="nav-item">
+                    {/* <li class="nav-item">
                       <a class="nav-link" href="#">Countered</a>
-                    </li>
+                    </li> */}
                     <li class="nav-item">
                       <a class="nav-link" href="#">Accepted</a>
                     </li>
@@ -75,7 +75,7 @@ class Contracts extends Component {
               <div className="col-md-2">
                 <p>ID</p>
               </div>
-              <div className="col-md-1">
+              {/* <div className="col-md-1">
                 <p>Platform</p>
               </div>
               <div className="col-md-1">
@@ -86,9 +86,9 @@ class Contracts extends Component {
               </div>
               <div className="col-md-1">
                 <p>Length</p>
-              </div>
+              </div> */}
               <div className="col-md-1">
-                <p>Price</p>
+                <p>Compensation</p>
               </div>
               <div className="col-md-2">
                 <p>Current User Votes</p>

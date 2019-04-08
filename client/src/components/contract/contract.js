@@ -31,6 +31,14 @@ class Contract extends Component {
             contractContent = (
                 <div>
                     <ContractDetail contract={contract} />
+                    <div className="card">
+                    <img className="card-img-top" src="..." alt="Card image cap"></img>
+                        <div className="card-body">
+                            <p className="card-text">
+                            Hi, my name is profile.handle and I’m with *business name here*. I’m reaching out because we love this photo you posted! We’d be willing to compensate you with --- for the rights to use it in of our future campaigns. If you’re interested, follow this link to see the full details of our offer: @url here: byterights.com/loewshotels/br124td
+                            </p>
+                        </div>
+                    </div>
                     <div>
                     <button onClick={this.onClickAccept}>Accept</button>
                     <button onClick={this.onClickDecline}>Decline</button>

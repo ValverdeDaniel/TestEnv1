@@ -48,7 +48,7 @@ class ContractItem extends Component {
           <div className="col-md-2">
             <p>{contract._id}</p>
           </div>
-          <div className="col-md-1">
+          {/* <div className="col-md-1">
             <p>{contract.platform}</p>
           </div>
           <div className="col-md-1">
@@ -59,7 +59,7 @@ class ContractItem extends Component {
           </div>
           <div className="col-md-1">
             <p>{contract.length_usage}</p>
-          </div>
+          </div> */}
           <div className="col-md-1">
             <p>{contract.price}</p>
           </div>

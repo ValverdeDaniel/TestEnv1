@@ -11,10 +11,11 @@ const ProfileActions = () => {
         <i className="fab fa-black-tie text-info mr-1" />
         Add Experience
       </Link>
-      <Link to="/add-education" className="btn btn-light">
+      {/* it might be easy to edit the add education to something else in the future */}
+      {/* <Link to="/add-education" className="btn btn-light">
         <i className="fas fa-graduation-cap text-info mr-1" />
         Add Education
-      </Link>
+      </Link> */}
     </div>
   );
 };

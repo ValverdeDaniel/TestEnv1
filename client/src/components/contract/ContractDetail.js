@@ -52,22 +52,22 @@ class ContractItem extends Component {
               // error={errors.url}
               info="URL containing image for licensing"
             />
-            <TextFieldGroup
+            {/* <TextFieldGroup
               value={contract.platform}
               info="Platform you will use this content on"
-            />
-            <TextFieldGroup
+            /> */}
+            {/* <TextFieldGroup
               value={contract.exclusive}
               info="Will the Buyer have Exclusive rights to this content?"
-            />
-            <TextFieldGroup
+            /> */}
+            {/* <TextFieldGroup
               value={contract.credit}
               info="Will the Creator receive credit in your posts? ('yes' or 'no')"
             />
             <TextFieldGroup
               value={contract.length_usage}
               info="How long does the Buyer have the rights to this content?"
-            />
+            /> */}
             <TextFieldGroup
               value={contract.price}
               info="Set Price"
