@@ -11,6 +11,14 @@ const ContractSchema = new Schema({
     type: String,
     required: true
   },
+  imageUrl: {
+    type: String,
+    required: true
+  },
+  igProfile: {
+    type: String,
+    required: true
+  },
   // platform: {
   //   type: String,
   //   required: true

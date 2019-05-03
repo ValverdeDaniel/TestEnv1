@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import classnames from 'classnames';
-import { Link } from 'react-router-dom'; 
+import { Link } from 'react-router-dom';
 
 //importing form components
 import TextFieldGroup from '../common/TextFieldGroup';
@@ -43,7 +43,7 @@ class ContractItem extends Component {
       <div className="table-row">
         <div className="row">
           <div className="col-md-1">
-            <img src="{placeholder}" />
+            <img src={contract.imageUrl} />
           </div>
           <div className="col-md-2">
             <p>{contract._id}</p>
@@ -74,7 +74,7 @@ class ContractItem extends Component {
         <p className="lead">{contract._id}</p> */}
       </div>
 
-      
+
     );
   }
 }

@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
 const passport = require('passport');
+const { parseIGUrl } = require('../../lib/parse-ig-url.js');
 
 // Load Validation
 // const validateProfileInput = require('../../validation/contract');
@@ -116,6 +117,14 @@ router.post(
   async (req, res) => {
     try {
       const contractFields = {...req.body};
+      const { imageUrl, profile } = await parseIGUrl(contractFields.url);
+      contractFields.user = req.user.id;
+
+      Object.assign(contractFields, {
+        imageUrl,
+        igProfile: profile
+      });
+
       contractFields.user = req.user.id;
       if (contractFields.skills) {
         contractFields.skills = contractFields.skills.split(',');
